@@ -13,8 +13,6 @@
 # config.source('tenka.py')
 
 
-# the goal is to try and get this thing to replace firefox in my daily use.
-
 config = config  # type: ConfigAPI # noqa: F821 pylint: disable=E0602,C0103
 c = c  # type: ConfigContainer # noqa: F821 pylint: disable=E0602,C0103
 
@@ -93,22 +91,12 @@ ESC_BIND = 'fullscreen --leave'
 
 c.bindings.default['normal'] = {}
 
-c.editor.command = [ '/usr/bin/urxvt', '-e', 'guake', '--show', '-n', 'qe', '-r', 'qute_edit', '-e', '"emacs', '-nw', '{file}"' ]
-
 #c.fileselect.folder.command =  [ 'gnome-commander' ]
 
 c.fileselect.folder.command =  [ '/usr/bin/urxvt', '-e', '-c', 'guake', '--show', '-n', 'qt_filesel', 
                                  '-r', 'qt_filesel', '-e', 'ranger', '--choosefile={}"' ]
 
-#c.fileselect.folder.command =  [ '/usr/bin/urxvt-256color', '-e', 'mc', '-f', '{}' ]
-
-#c.fileselect.multiple_files.command = [ '/usr/bin/urxvt-256color', '-e', 'mc', '-f', '{}' ]
-
-c.fileselect.multiple_files.command = [ 'krusader' ] # FUCK 3
-
-#c.fileselect.multiple_files.command = [ 'guake', '--show', '-n', 'qmfs', '-r', 'qt_multi_filesel', '-e', 'ranger' + ' --choosefiles={}' ]
-
-#c.fileselect.multiple_files.command = [ 'gnome-commander' ]
+c.fileselect.multiple_files.command = [ 'krusader' ] # 
 
 c.fileselect.handler = 'external'
 
@@ -172,13 +160,13 @@ c.bindings.commands['normal'] = {
     '<ctrl-x><c><d>': 'download-clear',
     '<ctrl-shift-w>': 'spawn -d xsel -bc ;; message-info "clipboard voided."',
     '<ctrl-u><s>': 'view-source',
-    '<ctrl-u><a>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', # useragents.me... cant live without it! i will actually just die without it! 777
+    '<ctrl-u><a>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', 
     '<ctrl-u><p>': 'print',
     '<ctrl-u><ctrl-v>': 'spawn -d mpv --loop --force-window=immediate --volume=50 {url}',
     '<ctrl-c><ctrl-z>': 'spawn -d /usr/bin/terminator ;; message-info "switching to shell."',
     '<ctrl-c><ctrl-shift-z>': 'cmd-set-text :spawn -d /usr/bin/terminator --working-directory ~/',
     '<ctrl-c><x>' : 'cmd-set-text -s :spawn -d /usr/bin/terminator --working-directory [dir] -x [cmd]', # mad ting would be to enter the command and then have the file-selector pop up as a way to choose the directory u wanna do stuff in... :DDDDD 
-    '<ctrl-c><ctrl-t>': 'spawn -d /usr/bin/terminator -x "emacs -nw .config/qutebrowser/themes/city-lights-theme.py" ;; message-info "loading theme configuration file."',
+    '<ctrl-c><ctrl-t>': 'cmd-set-text :spawn -d /usr/bin/terminator -x "emacs -nw .config/qutebrowser/themes/[theme_here]" ;; message-info "loading theme configuration file."',
     '<ctrl-c><ctrl-l>': 'config-source ~/.config/qutebrowser/tenka.py ;; message-info "tenka configuration reloaded."',
     '<ctrl-c><ctrl-e>': 'spawn -d /usr/bin/terminator -e "emacs -nw ~/.config/qutebrowser/tenka.py"',
     '<ctrl-x><p><r>': 'process',
@@ -360,7 +348,7 @@ c.bindings.commands['normal'] = {
         
     # frames
     # todo: study how gnu came up with the hotkey scheme they did
-    #       and just... refrrrrrrinvent the wheel here i guess.
+    #       and just... re invent the wheel here i guess.
     
     '<ctrl-t><1>': 'window-only',
     '<ctrl-x><5><2>': 'cmd-set-text -s :open -w',
@@ -406,10 +394,6 @@ c.bindings.commands['normal'] = {
     # Websites
     # will be <alt-x><o>, then the name.
     # <alt-x><o> as :open will become <ctrl-x><ctrl-s> (visit)     
-
-    # Will also find a way to do a custom query before opening a link to a site like YouTube? 
-
-    # Will figure out how to call it :search in this state. Patience. 
     
 #   '<ctrl-f><ctrl-x><s><u>': 'open -t https://sushigirl.us'
 
