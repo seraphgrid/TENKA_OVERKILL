@@ -79,8 +79,6 @@ c.content.blocking.adblock.lists = [ "https://big.oisd.nl",
 c.content.blocking.hosts.lists = [ "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts",
                                    "https://someonewhocares.org/hosts/hosts" ]
 
-c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1788.0" 
-
 #c.content.blocking.hosts.lists = ["https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"] 
 # Forward unbound keys
 # c.input.forward_unbound_keys = "all"
@@ -160,7 +158,7 @@ c.bindings.commands['normal'] = {
     '<ctrl-x><c><d>': 'download-clear',
     '<ctrl-shift-w>': 'spawn -d xsel -bc ;; message-info "clipboard voided."',
     '<ctrl-u><s>': 'view-source',
-    '<ctrl-u><a>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', 
+    '<ctrl-u><g>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', 
     '<ctrl-u><p>': 'print',
     '<ctrl-u><ctrl-v>': 'spawn -d mpv --loop --force-window=immediate --volume=50 {url}',
     '<ctrl-c><ctrl-z>': 'spawn -d /usr/bin/terminator ;; message-info "switching to shell."',
@@ -262,9 +260,9 @@ c.bindings.commands['normal'] = {
 
     # sheep pasting
 
-    '<ctrl-u><t>': 'cmd-set-text :spawn -d alacritty -e rtorrent "{clipboard}" -d ~/Downloads/',
+    '<ctrl-u><t>': 'cmd-set-text :spawn -d terminator -x rtorrent "{clipboard}" -d ~/Downloads/',
 #    '<ctrl-u><shift-t>': 'cmd-set-text :spawn -d terminator -x rtorrent "{primary}" -d ~/Downloads/', maybe... 
-    '<ctrl-h><shift-t>': 'hint links spawn -d alacritty -e rtorrent "{hint-url}" -d ~/Downloads/',
+    '<ctrl-h><shift-t>': 'hint links spawn -d terminator -x rtorrent "{hint-url}" -d ~/Downloads/',
     '<;>': 'open -t {clipboard}',
     
     '<;>': 'open -t {primary}',
