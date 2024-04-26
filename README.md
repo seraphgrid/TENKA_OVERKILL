@@ -10,8 +10,9 @@ everything is jumbled right now. it's very fuzzy, so i'll explain some things yo
     and the syntax necessary to run each command. alternatively, tear it down and do your
     own thing.
 
-2. change the commands involving the file manager you want to use. thirdly,
-    change the start page specified in c.url.default_page and c.url.start_pages, unless you like
+2. change the commands involving the file manager you want to use.
+
+3.  thirdly, change the start page specified in c.url.default_page and c.url.start_pages, unless you like
     that (currently, very) stupid thing. 
 
 --- BASICS --- 
