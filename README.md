@@ -30,8 +30,10 @@ the effect altogether is that it feels pretty massive, yes, but also that you ha
 that is constantly changing shape. much like emacs. in my own, far more delusional words,
 it feels like a diary connected to the internet. 
 
---- BASICS --- 
+--- BASICS ---
 
+    C-p moves the page upwards.
+    C-n moves the page downwards.
     SPC opens a new tab with whatever you type in the address bar.
     C-SPC opens a link in the current tab with whatever you type in the address bar.
     C-x TAB gives you some privacy.
