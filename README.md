@@ -25,7 +25,7 @@ it's likely that i do too, and that im working on it.
     ctrl-space opens the :open dialog.
     C-x TAB gives you some privacy.
     a lets you close tabs.
-    C-u lets you do different things tho interact with current URL you're facing.
+    C-u lets you do different things to interact with current URL you're facing.
     C-t gives you control of the tab you're facing.
     move tab positions with shift-left/right.
     the left and right arrows by themselves navigate history.
