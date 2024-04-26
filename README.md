@@ -43,7 +43,7 @@ it feels like a diary connected to the internet.
     t lets you pin tabs.
     C-t g lets you send a tab to another window.
     C-t t lets you take tabs from other windows.
-    R lets you reload the page.
+    R lets you reload the page. So does F5.
     C-x C-b TAB lets you see all the tabs in a formal layout.
     C-t s toggles tab vision, if you just completely lose your mind.
     C-u b lets you bookmark.
