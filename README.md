@@ -37,7 +37,7 @@ it feels like a diary connected to the internet.
     C-x TAB gives you some privacy.
     M-w copies text.
     C-y pastes text.
-    C-W clears the clipboard entirely using xsel. 
+    C-w clears the clipboard entirely using xsel. 
     a lets you close tabs.
     m lets you mute tabs.
     t lets you pin tabs.
