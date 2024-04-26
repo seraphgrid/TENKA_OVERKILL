@@ -13,7 +13,7 @@ SG: this is on the doomier side.
 
 SG: first, find and replace all instances of /usr/bin/terminator with the terminal you use
     and the syntax necessary to run each command. alternatively, tear it down and do your
-    own thing. we all have different goals.
+    own thing.
 
 SG: some commands are repeated and binded to different keys. there is a reason for this.
     one of them is that im thinking about everything right now, looking for a way to
