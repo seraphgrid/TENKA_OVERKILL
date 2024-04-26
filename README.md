@@ -43,6 +43,10 @@ SG: you can copy a magnet link, then use C-u t to load the link into rtorrent wh
 
 SG: rtorrent is fire tho. 
 
+U: MICROSOFT EDGE.
+
+SG: broken website but i have shit to do button. can change it or just obliterate it, honestly. 
+
 CLOSE_CHAT signal processed...
 
 loading tenka... 48%
