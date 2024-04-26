@@ -17,7 +17,8 @@ it's likely that i do too, and that im working on it.
     that (currently, very) stupid thing. 
 
 the effect altogether is that it feels pretty massive, yes, but also that you have a tool
-that is constantly changing shape. much like emacs. 
+that is constantly changing shape. much like emacs. in my own, far more delusional words,
+it feels like a diary connected to the internet. 
 
 --- BASICS --- 
 
