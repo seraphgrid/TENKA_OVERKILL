@@ -39,13 +39,17 @@ SG: oh... C-x C-a updates the adblock. C-x C-g updates the Greasemonkey scripts 
 
 U: RTORRENT?
 
-SG: you can copy a magnet link, then use C-u t to load the link into rtorrent which would of course be running inside of the terminal you specify. if the magnet link is hintable, you can use C-h T to do the same thing with the hinting function. you can change this command for the torrent client you actually use.
+SG: you can copy a magnet link, then use C-u t to load the link into rtorrent which would of course be running
+    inside of the terminal you specify. if the magnet link is hintable, you can use C-h T to do the same thing
+    with the hinting function. you can change this command for the torrent client you actually use.
 
 SG: rtorrent is fire tho. 
 
 U: MICROSOFT EDGE.
 
 SG: broken website but i have shit to do button. C-m w. you can change it or just obliterate it, honestly. 
+
+U: GOODVIBES?
 
 CLOSE_CHAT signal processed...
 
