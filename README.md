@@ -12,7 +12,7 @@ it's likely that i do too, and that im working on it.
     own thing.
 
 2. for any commands involving external commands, change them to programs you actually use
-    which serve an equivalent purpose.
+    which serve an equivalent purpose. alternatively, install rtorrent, xsel, yt-dlp and mpv.
 
 3. change the commands involving the file manager you want to use.
 
