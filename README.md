@@ -5,6 +5,7 @@ TENKA_OVERKILL
 PROGRESS... 45%
 
 PROBLEM: EXTERNAL PROGRAMS NEED INSTALLATION.
+PROBLEM: EMACS BINDINGS NOT GOING TOO WELL IN COMMAND MINIBUFFER.
 
 ...she isn't perfect. but if you know some emacs, i guess it won't be so scary.
 this is on the doomier side. everything is jumbled right now. it's very fuzzy
@@ -21,7 +22,7 @@ it's likely that i do too, and that im working on it.
 
 3. change the commands involving the file manager you want to use. M-X,
    M-X, fileselect.multiple_files.command [file manager]
-   You can then you use C-c C-s to save that change. 
+   You can then you use C-c C-s, then type config to save that change. 
 
 4.  change the start page specified in c.url.default_page and c.url.start_pages, unless you like
     that (currently, very) stupid thing. 
