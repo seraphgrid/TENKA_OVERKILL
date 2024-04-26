@@ -1,4 +1,4 @@
-# tenka - a simple, preconfigured Emacs binding set for qutebrowser
+# tenka - relatively simple, horrifying in size
 # tenka is ultimately work on a (currently) seven-year-old script, qutemacs, uploaded by jumper047. 
 
 # The aim of this binding set is to provide an Emacserian keymap for as much as possible inside of qutebrowser.
