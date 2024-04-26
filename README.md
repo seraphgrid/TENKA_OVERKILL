@@ -21,6 +21,9 @@ SG: some commands are repeated and binded to different keys. there is a reason f
     your hands are in awkward positions after typing or you just need to rest at the
     home keys. that's where things get vimmy.
 SG: anyways. everything is jumbled right now. it's very fuzzy, so i'll explain some things.
+
+U: OK. FINALLY.
+
 SG: spacebar opens the :open -t cmd dialog. ctrl-space opens the :open dialog. C-x TAB gives
     you some privacy. a lets you close tabs. C-u lets you do different things to interact with
     current URL you're facing. As such, C-t gives you control of the tab you're facing. you can
