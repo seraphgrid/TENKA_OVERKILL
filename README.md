@@ -1,4 +1,4 @@
-```
+bro didnt cook```
 loading tenka... 45%
 ...urge to bypass loading screen detected...
 
@@ -9,15 +9,11 @@ SG: dude... are you sure?
 
 SG: ...she isn't perfect... but if you know some emacs, i guess it won't be so scary.
 SG: this is on the doomier side.
-
 SG: everything is jumbled right now. it's very fuzzy, so i'll explain some things.
-
-U1: OK. FINALLY.
 
 SG: first, find and replace all instances of /usr/bin/terminator with the terminal you use
     and the syntax necessary to run each command. alternatively, tear it down and do your
     own thing.
-
 SG: second, change the commands involving the file manager you want to use. thirdly,
     change the start page specified in c.url.default_page and c.url.start_pages, unless you like
     that (currently, very) stupid thing. 
@@ -34,15 +30,9 @@ SG: h is now the main hinting key, and C-h gives you access to a variety of comm
     can help me by desiginating them to keys that make more sense and telling me what you did.
     that'd be cool. 
 
-U1: this is too much information...
-
 SG: oh... C-x C-a updates the adblock. C-x C-g updates the Greasemonkey scripts that tenka can
     understand. C-d c can clear downloads when they clutter your screen. C-d o can open them.
-    M-x is :, and M-X lets you use :set. 
-
-U1: RTORRENT?
-
-SG: of all the things you could ask...
+    M-x is :, and M-X lets you use :set.
 
 SG: you can copy a magnet link, then use C-u t to load the link into rtorrent which would of course be running
     inside of the terminal you specify. if the magnet link is hintable, you can use C-h T to do the same thing
