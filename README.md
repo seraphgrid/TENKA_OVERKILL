@@ -53,6 +53,8 @@ it feels like a diary connected to the internet.
     C-h gives you access to a variety of commands. a very wide variety.
     C-h i hints images.
     C-h I hints media that can be downloaded.
+    C-h b hints all URLs for bookmarking.
+    C-h b hints all URLs for quickmarking. 
 
     ; will open a link you've either selected or have already copied to your clipboard in another tab.
     ` will run commands inside of the terminal you select.
