@@ -154,7 +154,7 @@ c.bindings.commands['normal'] = {
     # [x] todo: copying the magnet link through through any uploaded media containing the link.
     '<ctrl-m><e>': 'spawn -d /usr/bin/terminator -e "emacs -nw ~/web_session_notes.txt"',
 
-    '<ctrl-shift-w>': 'spawn -d xsel -bc ;; message-info "clipboard voided."',
+    '<ctrl-w>': 'spawn -d xsel -bc ;; message-info "clipboard voided."',
     '<ctrl-u><s>': 'view-source',
     '<ctrl-u><a>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', # useragents.me... hint hint...
     '<ctrl-shift-u><a>': 'set content.headers.user_agent {clipboard} ;; message-info "UA switch registered."',
