@@ -20,9 +20,8 @@ it's likely that i do too, and that im working on it.
     which serve an equivalent purpose. alternatively, install rtorrent, xsel, yt-dlp, emacs and mpv.
     they're all pretty lightweight and non-offensive to just have sitting there, anyway. 
 
-3. change the commands involving the file manager you want to use. M-X,
-   M-X, fileselect.multiple_files.command [file manager]
-   You can then you use C-c C-s, then type config to save that change. 
+3. change the commands involving the file manager you want to use.
+   the variable to change is c.fileselect.multiple_files.command.
 
 4.  change the start page specified in c.url.default_page and c.url.start_pages, unless you like
     that (currently, very) stupid thing. 
