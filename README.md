@@ -33,15 +33,12 @@ it feels like a diary connected to the internet.
     C-W clears the clipboard entirely using xsel. 
     a lets you close tabs.
     m lets you mute tabs.
-        you may have to guess whether a tab is muted or not unless
-        you display tabs. figuring this out.
-
     t lets you pin tabs.
     C-t g lets you send a tab to another window.
     C-t t lets you take tabs from other windows.
     R lets you reload the page.
     C-x C-b TAB lets you see all the tabs in a formal layout.
-    C-t s toggles tab vision, if you just completely lose your mind. \
+    C-t s toggles tab vision, if you just completely lose your mind.
     C-u b lets you bookmark.
     C-t b lets you load a bookmark.
     C-u q lets you quickmark.
