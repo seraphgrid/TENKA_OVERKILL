@@ -22,7 +22,7 @@ SG: some commands are repeated and binded to different keys. there is a reason f
     home keys. that's where things get vimmy.
 SG: anyways. everything is jumbled right now. it's very fuzzy, so i'll explain some things.
 
-U: OK. FINALLY.
+U1: OK. FINALLY.
 
 SG: spacebar opens the :open -t cmd dialog. ctrl-space opens the :open dialog. C-x TAB gives
     you some privacy. a lets you close tabs. C-u lets you do different things to interact with
@@ -36,11 +36,11 @@ SG: h is now the main hinting key, and C-h gives you access to a variety of comm
     can help me by desiginating them to keys that make more sense and telling me what you did.
     that'd be cool. 
 
-U: this is too much
+U1: this is too much
 
 SG: oh... C-x C-a updates the adblock. C-x C-g updates the Greasemonkey scripts that tenka can understand. 
 
-U: RTORRENT?
+U1: RTORRENT?
 
 SG: you can copy a magnet link, then use C-u t to load the link into rtorrent which would of course be running
     inside of the terminal you specify. if the magnet link is hintable, you can use C-h T to do the same thing
@@ -48,7 +48,7 @@ SG: you can copy a magnet link, then use C-u t to load the link into rtorrent wh
 
 SG: rtorrent is fire tho. 
 
-U: MICROSOFT EDGE.
+U1: microsoft edge.
 
 SG: broken website but i have shit to do button. C-m w. you can change it or just obliterate it, honestly. 
 
