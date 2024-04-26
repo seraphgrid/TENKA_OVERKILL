@@ -77,7 +77,7 @@ it feels like a diary connected to the internet.
     C-d c can clear downloads when they clutter your screen. C-d o can open them.
     M-x is the minibuffer. If you mess up, you can reinitialize the buffer and hit
                            the up or down arrow keys to edit a previous command.
-    M-X lets you use :set.
+    M-X lets you use :set, aiding in fast config changes or testing.
     H will bring up various help dialogs you can pick through to understand what at all is happening. 
     C-c C-e lets you edit the config.
     C-c C-z lets you open a shell.
