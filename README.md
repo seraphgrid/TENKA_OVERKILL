@@ -35,11 +35,12 @@ it feels like a diary connected to the internet.
     m lets you mute tabs.
     t lets you pin tabs.
     R lets you reload the page.
+    C-x C-b TAB lets you see all the tabs in a formal layout.
+    C-t s toggles tab vision, if you just completely lose your mind. 
     C-u b lets you bookmark.
     C-t b lets you load a bookmark.
     C-u q lets you quickmark.
     C-t q lets you load a quickmark.
-    C-t s toggles tab vision.
     C-u M-w lets you copy the current working URL to your clipboard.
     C-u d downloads the entire page source.
     C-x p features different proxy settings that can be enabled or configured easily.
