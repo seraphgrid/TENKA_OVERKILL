@@ -43,6 +43,9 @@ it feels like a diary connected to the internet.
     a lets you close tabs.
     m lets you mute tabs.
     t lets you pin tabs.
+    C-x u lets you undo a tab being closed.
+          There is no redo function in qutebrowser's original source code.
+
     C-t g lets you send a tab to another window.
     C-t t lets you take tabs from other windows.
     R lets you reload the page. So does F5.
