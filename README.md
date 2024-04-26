@@ -2,6 +2,10 @@
 
 TENKA_OVERKILL
 
+PROGRESS... 45%
+
+PROBLEM: EXTERNAL PROGRAMS NEED INSTALLATION.
+
 ...she isn't perfect. but if you know some emacs, i guess it won't be so scary.
 this is on the doomier side. everything is jumbled right now. it's very fuzzy
 so i'll explain some things you should do first. if you hate any part of this process,
@@ -9,12 +13,13 @@ it's likely that i do too, and that im working on it.
 
 1. find and replace all instances of /usr/bin/terminator with the terminal you use
     and the syntax necessary to run each command. alternatively, tear it down and do your
-    own thing. or... just install terminator :DDDDDD 
+    own thing. 
 
 2. for any commands involving external commands, change them to programs you actually use
-    which serve an equivalent purpose. alternatively, install rtorrent, xsel, yt-dlp and mpv.
+    which serve an equivalent purpose. alternatively, install rtorrent, xsel, yt-dlp, emacs and mpv.
+    they're all pretty lightweight and non-offensive to just have sitting there, anyway. 
 
-3. change the commands involving the file manager you want to use.
+3. change the commands involving the file manager you want to use. M-X while the browser is already open can probably help you fly through this part. You can then you use C-c C-s to save that change. 
 
 4.  change the start page specified in c.url.default_page and c.url.start_pages, unless you like
     that (currently, very) stupid thing. 
