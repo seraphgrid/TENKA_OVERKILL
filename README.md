@@ -1,6 +1,3 @@
-
-
-
 ```
 
 TENKA_OVERKILL
@@ -18,6 +15,9 @@ it's likely that i do too, and that im working on it.
 
 3.  thirdly, change the start page specified in c.url.default_page and c.url.start_pages, unless you like
     that (currently, very) stupid thing. 
+
+the effect altogether is that it feels pretty massive, yes, but also that you have a tool
+that is constantly changing shape. much like emacs. 
 
 --- BASICS --- 
 
