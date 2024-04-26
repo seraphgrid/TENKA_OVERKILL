@@ -11,9 +11,12 @@ it's likely that i do too, and that im working on it.
     and the syntax necessary to run each command. alternatively, tear it down and do your
     own thing.
 
-2. change the commands involving the file manager you want to use.
+2. for any commands involving external commands, change them to programs you actually use
+    which serve an equivalent purpose.
 
-3.  thirdly, change the start page specified in c.url.default_page and c.url.start_pages, unless you like
+3. change the commands involving the file manager you want to use.
+
+4.  change the start page specified in c.url.default_page and c.url.start_pages, unless you like
     that (currently, very) stupid thing. 
 
 the effect altogether is that it feels pretty massive, yes, but also that you have a tool
@@ -22,11 +25,12 @@ it feels like a diary connected to the internet.
 
 --- BASICS --- 
 
+    SPC opens a new tab with whatever you type in the address bar.
     C-SPC opens a link in the current tab with whatever you type in the address bar.
-    SPC opens a new link with whatever you type in the address bar.
     C-x TAB gives you some privacy.
     M-w copies text.
     C-y pastes text.
+    C-W clears the clipboard entirely using xsel. 
     a lets you close tabs.
     m lets you mute tabs.
     t lets you pin tabs.
@@ -69,6 +73,9 @@ it feels like a diary connected to the internet.
 -- INSERT MODE --
 
     w or C-i both enter insert mode.
+    M-w copies text.
+    C-y pastes text.
+    C-C clears the clipboard.
     C-p moves the cursor up.
     C-n moves the cursor down.
     C-f moves the cursor right.
@@ -82,5 +89,12 @@ it feels like a diary connected to the internet.
     C-e goes to the end.
     M-l goes to the end of a word.
     M-h goes to the right of a word.
+    C-g or ESC leaves this mode. 
+    C-c C-z still opens a shell.
+    C-c C-l still reloads the configuration.
     
+-- CARET MODE --
+
+    i'm on it.
+
 ```
