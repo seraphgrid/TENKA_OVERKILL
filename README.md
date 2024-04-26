@@ -73,7 +73,9 @@ it feels like a diary connected to the internet.
     C-c C-e lets you edit the config.
     C-c C-z lets you open a shell.
     C-c C-Z lets you open a shell facing a specific directory.
-    C-c C-l lets you reload tenka without closing it. 
+    C-c C-l lets you reload tenka without closing it.
+    C-c x lets you open a terminal with a command running,
+          optionally in a directory you specify. Terminator W.
 
 -- INSERT MODE --
 
