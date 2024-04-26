@@ -166,7 +166,7 @@ c.bindings.commands['normal'] = {
     '<ctrl-c><ctrl-t>': 'spawn -d /usr/bin/terminator -x "emacs -nw .config/qutebrowser/themes/city-lights-theme.py" ;; message-info "loading theme configuration file."',
     '<ctrl-c><ctrl-l>': 'config-source ~/.config/qutebrowser/tenka.py ;; message-info "tenka configuration reloaded."',
     '<ctrl-c><ctrl-e>': 'spawn -d /usr/bin/terminator -e "emacs -nw ~/.config/qutebrowser/tenka.py"',
-    '<ctrl-c><ctrl-s>': 'cmd-set-text -s :save [config/key-config/cookies]' 
+    '<ctrl-c><ctrl-s>': 'cmd-set-text -s :save [config/key-config/cookies]',
     '<ctrl-x><p><r>': 'process',
     '<ctrl-u><d>': 'download {url}', # useful for downloading page source.
     '<`>': 'spawn -d /usr/bin/terminator -e {primary} ;; message-warning "i hope you thought about this!"', # if youre flying through a troubleshoot process and just need to test a given command, this binding comes in super handy. it is the grave key more symbolically than it should be, representing the idea that running random commands on the internet can put your system in its grave. ur doooom xDDD 
