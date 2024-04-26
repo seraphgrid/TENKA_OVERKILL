@@ -1,10 +1,10 @@
- # tenka - a simple, preconfigured Emacs binding set for qutebrowser
+# tenka - a simple, preconfigured Emacs binding set for qutebrowser
 # tenka is ultimately work on a (currently) seven-year-old script, qutemacs, uploaded by jumper047. 
 
-# The aim of this binding set is to provide an Emacserian keymap for as much as possible inside of qutebrowser. 
-# As fast as qutebrowser is and feels to use, I do wish it'd make me think harder about my decisions. 
-# This is my mindfulness browser. 
-# It is important that this idea is tested or frameworked thoroughly enough to work smoothly.
+# The aim of this binding set is to provide an Emacserian keymap for as much as possible inside of qutebrowser.
+# The result currently is doom-y though. I dislike it, personally.
+# I'm doing what I can to make the Vim keys as minimal as possible. 
+# This browser allows me to go at my pace. 
 
 # Installation
 #
@@ -12,6 +12,8 @@
 # 2. Add this line to your config.py, and point the path to this file:
 # config.source('tenka.py')
 
+
+# the goal is to try and get this thing to replace firefox in my daily use.
 
 config = config  # type: ConfigAPI # noqa: F821 pylint: disable=E0602,C0103
 c = c  # type: ConfigContainer # noqa: F821 pylint: disable=E0602,C0103
@@ -79,6 +81,8 @@ c.content.blocking.adblock.lists = [ "https://big.oisd.nl",
 c.content.blocking.hosts.lists = [ "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts",
                                    "https://someonewhocares.org/hosts/hosts" ]
 
+c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1788.0" 
+
 #c.content.blocking.hosts.lists = ["https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"] 
 # Forward unbound keys
 # c.input.forward_unbound_keys = "all"
@@ -89,12 +93,9 @@ ESC_BIND = 'fullscreen --leave'
 
 c.bindings.default['normal'] = {}
 
-#c.fileselect.folder.command =  [ 'gnome-commander' ]
+c.editor.command = [ '/usr/bin/terminator', '-x', '"emacs', '-nw', '{file}"' ]
 
-c.fileselect.folder.command =  [ '/usr/bin/urxvt', '-e', '-c', 'guake', '--show', '-n', 'qt_filesel', 
-                                 '-r', 'qt_filesel', '-e', 'ranger', '--choosefile={}"' ]
-
-c.fileselect.multiple_files.command = [ 'krusader' ] # 
+c.fileselect.multiple_files.command = [ 'gnome-commander' ] # FUCK 
 
 c.fileselect.handler = 'external'
 
@@ -106,7 +107,7 @@ c.content.cookies.accept = "no-3rdparty"
 
 c.content.headers.do_not_track = False
 
-c.url.default_page = "https://seraphgrid.github.io"
+c.url.default_page = "https://seraphgrid.github.io" # not meant to be a landing page. it's so fucking zoomerfied right now. just give me a bit. the links will be twice as useful. 
 
 c.url.start_pages = [ "https://seraphgrid.github.io" ] 
 
@@ -158,18 +159,18 @@ c.bindings.commands['normal'] = {
     '<ctrl-x><c><d>': 'download-clear',
     '<ctrl-shift-w>': 'spawn -d xsel -bc ;; message-info "clipboard voided."',
     '<ctrl-u><s>': 'view-source',
-    '<ctrl-u><g>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', 
+    '<ctrl-u><a>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', # useragents.me... cant live without it! i will actually just die without it! 
     '<ctrl-u><p>': 'print',
     '<ctrl-u><ctrl-v>': 'spawn -d mpv --loop --force-window=immediate --volume=50 {url}',
     '<ctrl-c><ctrl-z>': 'spawn -d /usr/bin/terminator ;; message-info "switching to shell."',
     '<ctrl-c><ctrl-shift-z>': 'cmd-set-text :spawn -d /usr/bin/terminator --working-directory ~/',
-    '<ctrl-c><x>' : 'cmd-set-text -s :spawn -d /usr/bin/terminator --working-directory [dir] -x [cmd]', # mad ting would be to enter the command and then have the file-selector pop up as a way to choose the directory u wanna do stuff in... :DDDDD 
-    '<ctrl-c><ctrl-t>': 'cmd-set-text :spawn -d /usr/bin/terminator -x "emacs -nw .config/qutebrowser/themes/[theme_here]" ;; message-info "loading theme configuration file."',
+    '<ctrl-c><x>' : 'cmd-set-text -s :spawn -d /usr/bin/terminator --working-directory [dir] -x [cmd]', # mad ting would be to enter the command and then have the file-selector pop up as a way to choose the directory u wanna do stuff in...
+    '<ctrl-c><ctrl-t>': 'spawn -d /usr/bin/terminator -x "emacs -nw .config/qutebrowser/themes/city-lights-theme.py" ;; message-info "loading theme configuration file."',
     '<ctrl-c><ctrl-l>': 'config-source ~/.config/qutebrowser/tenka.py ;; message-info "tenka configuration reloaded."',
     '<ctrl-c><ctrl-e>': 'spawn -d /usr/bin/terminator -e "emacs -nw ~/.config/qutebrowser/tenka.py"',
     '<ctrl-x><p><r>': 'process',
     '<ctrl-u><d>': 'download {url}', # useful for downloading page source.
-    '<`>': 'spawn -d /usr/bin/terminator -e {primary} ;; message-warning "i hope you thought about this!"', # the most gangster hotkey ever created on linux... if youre flying through a troubleshoot process and just need to test a given command, this binding comes in super handy. it is the grave key more symbolically than it should be, representing the idea that running random commands on the internet can put your system in its grave. ur doooom xDDD 
+    '<`>': 'spawn -d /usr/bin/terminator -e {primary} ;; message-warning "i hope you thought about this!"', # if youre flying through a troubleshoot process and just need to test a given command, this binding comes in super handy. it is the grave key more symbolically than it should be, representing the idea that running random commands on the internet can put your system in its grave. ur doooom xDDD 
     '<=>': 'zoom-in', 
     '<->': 'zoom-out',
     # yt-dlp
@@ -244,8 +245,8 @@ c.bindings.commands['normal'] = {
     '<ctrl-h><ctrl-u>': 'hint links yank ;; message-info "selected url --> clipboard when executed."',
     '<ctrl-h><h>': 'hint all hover ;; message-info "soft hinting."',
     '<ctrl-h><u>': 'hint links ;; message-info "hovering all accessible links."',
-    '<ctrl-h><a>' : 'hint links fill :cmd-set-text :spawn -d /usr/bin/urxvt -e yt-dlp --verbose --extract-audio --audio-quality 0 {hint-url} -o $HOME/Music/%(title)s.%(ext)s ;; message-info "audio downloaded as flac when executed."',
-    '<ctrl-h><v>':'hint links fill :cmd-set-text :spawn -d /usr/bin/urxvt -n $HOME -e yt-dlp {hint-url} -o $HOME/Videos/%(title)s.%(ext)s --verbose ;; message-info "video downloaded when executed."',
+    '<ctrl-h><a>' : 'hint links fill :cmd-set-text :spawn -d /usr/bin/terminator -x yt-dlp --verbose --extract-audio --audio-quality 0 {hint-url} -o $HOME/Music/%(title)s.%(ext)s ;; message-info "audio downloaded as flac when executed."',
+    '<ctrl-h><v>':'hint links fill :cmd-set-text :spawn -d /usr/bin/terminator -x yt-dlp {hint-url} -o $HOME/Videos/%(title)s.%(ext)s --verbose ;; message-info "video downloaded when executed."',
 
     '<ctrl-h><alt-w>': 'hint links yank', 
     # hint prog-rams
@@ -291,8 +292,7 @@ c.bindings.commands['normal'] = {
 
     '<shift-left>': 'tab-move -',
     '<shift-right>': 'tab-move +',
-    '<ctrl-t><s>': 'config-cycle tabs.show always switching ;; message-info "tab position altered."', 
-    '<ctrl-t><h>': 'set tabs.show switching ;; message-info "tabs displaying variably."',
+    '<ctrl-t><s>': 'config-cycle tabs.show always switching ;; message-info "altered perception of tabs."', 
     '<ctrl-x><k>': 'tab-close',
     '<ctrl-x><0>': 'tab-close',
     '<x>': 'tab-close',
@@ -340,13 +340,13 @@ c.bindings.commands['normal'] = {
     '<(>': 'tab-focus 29',
     '<)>': 'tab-focus 30',
     '<ctrl-x><o>': 'tab-focus +1',
-    '<ctrl-x><ctrl-b>': 'cmd-set-text :tab-select',
+    '<ctrl-x><ctrl-b>': 'cmd-set-text :tab-select', # the recommended way to tab switch. 
     # OR...
-    '<b>': 'cmd-set-text :tab-select',
+#   '<b>': 'cmd-set-text :tab-select',
         
     # frames
     # todo: study how gnu came up with the hotkey scheme they did
-    #       and just... re invent the wheel here i guess.
+    #       and just... refrrrrrrinvent the wheel here i guess.
     
     '<ctrl-t><1>': 'window-only',
     '<ctrl-x><5><2>': 'cmd-set-text -s :open -w',
@@ -374,7 +374,7 @@ c.bindings.commands['normal'] = {
     '<ctrl-m><p>': 'spawn -d keepassxc', 
 
     '<ctrl-m><w>': 'spawn -d microsoft-edge {url}', # broken-website-but-i-have-shit-to-do button
-    '<ctrl-m><f>': 'spawn -d /usr/bin/urxvt -e mc',
+    '<ctrl-m><f>': 'spawn -d /usr/bin/terminator -x mc',
     '<ctrl-m><ctrl-r>': 'spawn -d /usr/bin/riseup-vpn.launcher',
     '<ctrl-m><m>': 'spawn -d pavucontrol',
     '<ctrl-x><v><v>': ':version',
@@ -392,6 +392,10 @@ c.bindings.commands['normal'] = {
     # Websites
     # will be <alt-x><o>, then the name.
     # <alt-x><o> as :open will become <ctrl-x><ctrl-s> (visit)     
+
+    # Will also find a way to do a custom query before opening a link to a site like YouTube? 
+
+    # Will figure out how to call it :search in this state. Patience. 
     
 #   '<ctrl-f><ctrl-x><s><u>': 'open -t https://sushigirl.us'
 
