@@ -9,7 +9,7 @@ it's likely that i do too, and that im working on it.
 
 1. find and replace all instances of /usr/bin/terminator with the terminal you use
     and the syntax necessary to run each command. alternatively, tear it down and do your
-    own thing.
+    own thing. or... just install terminator :DDDDDD 
 
 2. for any commands involving external commands, change them to programs you actually use
     which serve an equivalent purpose. alternatively, install rtorrent, xsel, yt-dlp and mpv.
