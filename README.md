@@ -75,7 +75,8 @@ it feels like a diary connected to the internet.
     C-x C-a updates the adblock. 
     C-x C-g updates the Greasemonkey scripts that tenka can understand. 
     C-d c can clear downloads when they clutter your screen. C-d o can open them.
-    M-x is the minibuffer.
+    M-x is the minibuffer. If you mess up, you can reinitialize the buffer and hit
+                           the up or down arrow keys to edit a previous command.
     M-X lets you use :set.
     H will bring up various help dialogs you can pick through to understand what at all is happening. 
     C-c C-e lets you edit the config.
