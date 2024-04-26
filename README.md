@@ -1,4 +1,4 @@
-nah let bro cook```
+```
 loading tenka... 45%.
 ...urge to bypass loading screen detected...
 
