@@ -1,5 +1,6 @@
 ```
 
+TENKA_OVERKILL
 
 ...she isn't perfect... but if you know some emacs, i guess it won't be so scary.
 this is on the doomier side.
@@ -19,9 +20,11 @@ everything is jumbled right now. it's very fuzzy, so i'll explain some things yo
     ctrl-space opens the :open dialog.
     C-x TAB gives you some privacy.
     a lets you close tabs.
-    C-u lets you do different things tho interact with current URL you're facing. AsC-t gives you control of the tab you're facing. you can
-    move tab positions with shift-left/right. the left and right arrows by themselves navigate
-    history. C-h c, the only C-h command that has nothing to do with hinting, clears your history. 
+    C-u lets you do different things tho interact with current URL you're facing.
+    C-t gives you control of the tab you're facing.
+    move tab positions with shift-left/right.
+    the left and right arrows by themselves navigate history.
+    C-h c, the only C-h command that has nothing to do with hinting, clears your history. 
     
     h is now the main hinting key.
     C-h gives you access to a variety of commands. a very wide variety.
