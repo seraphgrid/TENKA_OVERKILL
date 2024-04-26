@@ -1,10 +1,13 @@
+
+
+
 ```
 
 TENKA_OVERKILL
 
-...she isn't perfect... but if you know some emacs, i guess it won't be so scary.
-this is on the doomier side.
-everything is jumbled right now. it's very fuzzy, so i'll explain some things you should do first.
+...she isn't perfect. but if you know some emacs, i guess it won't be so scary.
+this is on the doomier side. everything is jumbled right now. it's very fuzzy
+so i'll explain some things you should do first.
 
 1. find and replace all instances of /usr/bin/terminator with the terminal you use
     and the syntax necessary to run each command. alternatively, tear it down and do your
