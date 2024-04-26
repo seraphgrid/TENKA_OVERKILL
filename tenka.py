@@ -1,4 +1,4 @@
-# tenka - relatively simple, horrifying in size
+# tenka - a simple, preconfigured Emacs binding set for qutebrowser
 # tenka is ultimately work on a (currently) seven-year-old script, qutemacs, uploaded by jumper047. 
 
 # The aim of this binding set is to provide an Emacserian keymap for as much as possible inside of qutebrowser.
@@ -265,6 +265,7 @@ c.bindings.commands['normal'] = {
     # tenka buffer nav
     
     '<shift-r>': 'reload',
+    '<F5>': 'reload',
     '<left>': 'back',
     '<right>': 'forward',
     '<ctrl-h><shift-c>': 'history-clear --force ;; spawn -d /usr/bin/terminator -x "rm -rf ~/.local/share/qutebrowser/cookies" ;; message-info "history entirely eliminated. let\'s start over, shall we?"',
@@ -399,6 +400,7 @@ c.bindings.commands['normal'] = {
 
 c.bindings.commands['command'] = {
 
+    
     '<ctrl-s>': 'search-next',
     '<ctrl-r>': 'search-prev',
 
