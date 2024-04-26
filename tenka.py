@@ -83,7 +83,6 @@ c.content.blocking.hosts.lists = [ "https://raw.githubusercontent.com/StevenBlac
 
 c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1788.0" 
 
-#c.content.blocking.hosts.lists = ["https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"] 
 # Forward unbound keys
 # c.input.forward_unbound_keys = "all"
 
@@ -95,7 +94,7 @@ c.bindings.default['normal'] = {}
 
 c.editor.command = [ '/usr/bin/terminator', '-x', '"emacs', '-nw', '{file}"' ]
 
-c.fileselect.multiple_files.command = [ 'gnome-commander' ] # FUCK 
+c.fileselect.multiple_files.command = [ 'gnome-commander' ]
 
 c.fileselect.handler = 'external'
 
@@ -119,26 +118,24 @@ c.tabs.show_switching_delay = 3000
 
 c.bindings.commands['normal'] = {
 
-    # Navigation
+    # nav
 
     # vertical
 
-    '<ctrl-p>': 'scroll-page 0 -0.3',
-    '<ctrl-n>': 'scroll-page 0 0.3',
-    '<f>': 'scroll-page 0 0.1',
+    '<ctrl-p>': 'scroll-page 0 -0.2',
+    '<ctrl-n>': 'scroll-page 0 0.2',
+    '<f>': 'scroll-page 0 0.2',
     '<e>': 'scroll-page 0 -0.2',
-
-
  
     '<ctrl-shift-p>': 'scroll-page 0 -0.4',
     '<ctrl-shift-n>': 'scroll-page 0 0.3',
 
     # horizontal
 
-    '<ctrl-b>': 'scroll-page -0.3 0',
-    '<ctrl-f>':'scroll-page 0.3 0',
+    '<ctrl-b>': 'scroll-page -0.2 0',
+    '<ctrl-f>':'scroll-page 0.2 0',
     '<d>': 'scroll-page -0.2 0',
-    '<g>':'scroll-page 0.1 0',
+    '<g>':'scroll-page 0.2 0',
     '<ctrl-a>': 'scroll-page -0.6 0',
     '<ctrl-e>':'scroll-page 0.6 0',
     
@@ -149,17 +146,18 @@ c.bindings.commands['normal'] = {
     '<alt-.>': 'scroll-to-perc 100', # todo: <alt-\>>
 
    
-    # sheeputils
+    # tenkautils
     
     # [x] todo: quickly opening devtools (perhaps to different tabs)
     # [x] todo: hotkey to open current url in rtorrent.
     # [x] todo: more hacker style hotkeys like the proxy n stuff generally. 
     # [x] todo: copying the magnet link through through any uploaded media containing the link.
     '<ctrl-m><e>': 'spawn -d /usr/bin/terminator -e "emacs -nw ~/web_session_notes.txt"',
-    '<ctrl-x><c><d>': 'download-clear',
+
     '<ctrl-shift-w>': 'spawn -d xsel -bc ;; message-info "clipboard voided."',
     '<ctrl-u><s>': 'view-source',
-    '<ctrl-u><a>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', # useragents.me... cant live without it! i will actually just die without it! 
+    '<ctrl-u><a>': 'set content.headers.user_agent {primary} ;; message-info "UA switch registered."', # useragents.me... hint hint...
+    '<ctrl-shift-u><a>': 'set content.headers.user_agent {clipboard} ;; message-info "UA switch registered."',
     '<ctrl-u><p>': 'print',
     '<ctrl-u><ctrl-v>': 'spawn -d mpv --loop --force-window=immediate --volume=50 {url}',
     '<ctrl-c><ctrl-z>': 'spawn -d /usr/bin/terminator ;; message-info "switching to shell."',
@@ -186,40 +184,35 @@ c.bindings.commands['normal'] = {
     '<ctrl-x><s>': 'set statusbar.show always',
     '<ctrl-x><h>': 'set statusbar.show in-mode',
 
-    
-    # 'cmd-set-text :spawn -d alacritty -e rtorrent {url} -d ~/Downloads/'
-
+    # tenkaproxy
                                 # 0 - no proxy activated
                                 # 1 - systemwide proxy
                                 # 2 - tor socks proxy
-                                # 3 - burp suite/mitmproxy default port. dont... DONT JUDGE ME. 
+                                # 3 - burp suite/mitmproxy default port. 
                                 # 4 - custom http/default privoxy port
                                 # 5 - custom socks
                                 # 6 - custom configuration file
     
     '<ctrl-x><p><0>': 'set content.proxy none ;; message-info "no running proxy in place."',   
     '<ctrl-x><p><1>': 'set content.proxy system ;; message-info "system proxy. tenka see, tenka do."',
-    '<ctrl-x><p><2>': 'set content.proxy socks://localhost:9050/ ;; message-info "SOCKS5 Tor proxy online."',
-    '<ctrl-x><p><3>': 'set content.proxy http://localhost:8080/ ;; message-info "Generic HTTP 8080 in use."',
-    '<ctrl-x><p><4>': 'cmd-set-text :set content.proxy http://127.0.0.1/ ;; message-info "Customized HTTP proxy in use."',
-    '<ctrl-x><p><5>': 'cmd-set-text :set content.proxy https://127.0.0.1/ ;; message-info "Customized HTTPS proxy in use."',
-    '<ctrl-x><p><6>': 'cmd-set-text :set content.proxy socks://127.0.0.1/ ;; message-info "Customized SOCKS proxy in use."',
-    '<ctrl-x><p><7>': 'set content.proxy pac+[domain]/[filename].pac ;; message-info "Custom PAC applied to proxy in use."',
-
-
+    '<ctrl-x><p><2>': 'set content.proxy socks://localhost:9050/ ;; message-info "socks5 tor proxy online."',
+    '<ctrl-x><p><3>': 'set content.proxy http://localhost:8080/ ;; message-info "generic HTTP 8080 in use."',
+    '<ctrl-x><p><4>': 'cmd-set-text :set content.proxy http://[ip]:[port]/ ;; message-info "customized HTTP proxy in use."',
+    '<ctrl-x><p><5>': 'cmd-set-text :set content.proxy https://[ip]/[port] ;; message-info "customized HTTPS proxy in use."',
+    '<ctrl-x><p><6>': 'cmd-set-text :set content.proxy socks://[ip]/[port] ;; message-info "customized SOCKS proxy in use."',
+    '<ctrl-x><p><7>': 'set content.proxy pac+[domain]/[file].pac ;; message-info "custom PAC directives applied."',
 
     '<ctrl-x><ctrl-c>': 'quit',
     '<ctrl-x><ctrl-x>': 'restart',
     '<ctrl-x><u>': 'undo ;; message-info "error rescinded."',
     '<ctrl-x><shift-u>': 'undo --window ;; message-info "error rescinded."', 
-#    '<ctrl-x><shift-u>': 'redo', # this will exist eventually... right? 
 
     '<alt-shift-5>': 'cmd-set-text :screenshot',   
 
     '<ctrl-x><ctrl-a>': 'adblock-update ;; message-info "refreshing anti-advertisement filters and hosts."',
     '<ctrl-x><ctrl-g>': 'greasemonkey-reload', 
     
-    # sheep mini buffer
+    # tenka mini buffer
     
     '<s>': 'search-next',
     '<r>': 'search-prev', 
@@ -231,11 +224,11 @@ c.bindings.commands['normal'] = {
     '<shift-f>': 'fullscreen',
     # Will eventually be all necessary minibuffer commands, with patience. 
     
-    # sheephints
+    # tenkahints
      
     '<h>': 'hint all',
     '<c>': 'hint all ;; message-info "one-handed traversal."', 
-    '<ctrl-h><shift-i>': 'hint images download ;; message-info "hinting all downloadable media."',
+    '<ctrl-h><f>': 'hint images download ;; message-info "hinting all downloadable media."',
     '<ctrl-h><ctrl-i>': 'hint inputs ;; message-info "hinting input boxes only." ;; mode-enter insert',
     '<ctrl-h><i>': 'hint images',
     '<ctrl-h><d>': 'hint all download ;; message-info "hinting any resource for download."',
@@ -253,13 +246,13 @@ c.bindings.commands['normal'] = {
     
     # todo: make this less messy.
     
-    # sheep copying
+    # tenka copying
 
     '<alt-w>': 'fake-key <Ctrl-c> ;; message-info "selection transposed to clipboard.', #lj 
     '<ctrl-u><alt-w>': 'yank url', # Copy frame url.
-    '<ctrl-y>': 'fake-key <Ctrl-v> ;; message-info "releasing selection."',
+    '<ctrl-y><y>': 'fake-key <Ctrl-v> ;; message-info "releasing selection."',
 
-    # sheep pasting
+    # tenka pasting
 
     '<ctrl-u><t>': 'cmd-set-text :spawn -d terminator -x rtorrent "{clipboard}" -d ~/Downloads/',
 #    '<ctrl-u><shift-t>': 'cmd-set-text :spawn -d terminator -x rtorrent "{primary}" -d ~/Downloads/', maybe... 
@@ -268,14 +261,15 @@ c.bindings.commands['normal'] = {
     
     '<;>': 'open -t {primary}',
 
-    # sheep buffer nav
+    # tenka buffer nav
     
     '<shift-r>': 'reload',
     '<left>': 'back',
     '<right>': 'forward',
-   
+    '<ctrl-h><c>': 'history-clear --force ;; message-info "history eliminated. let\'s start over, shall we?"',
+    '<ctrl-shift-h>': 'history -t',
 
-    # sheepmarks
+    # tenkamarks
     
     '<ctrl-t><b>':'cmd-set-text -s :bookmark-load',
     '<ctrl-u><b>': 'cmd-set-text -s :bookmark-add {url}',
@@ -286,9 +280,10 @@ c.bindings.commands['normal'] = {
     
     # saturn 
 
-    '<ctrl-x><d>': 'cmd-set-text -s :download-open',
+    '<ctrl-d><o>': 'cmd-set-text -s :download-open',
+    '<ctrl-d><c>': 'download-clear ;; message-info "download history truncated."',
     
-    # tab_control
+    # tenkatabs
 
     '<shift-left>': 'tab-move -',
     '<shift-right>': 'tab-move +',
@@ -340,7 +335,8 @@ c.bindings.commands['normal'] = {
     '<(>': 'tab-focus 29',
     '<)>': 'tab-focus 30',
     '<ctrl-x><o>': 'tab-focus +1',
-    '<ctrl-x><ctrl-b>': 'cmd-set-text :tab-select', # the recommended way to tab switch. 
+    '<ctrl-x><ctrl-b>': 'cmd-set-text -s :tab-select', # the recommended way to tab switch.
+    '<ctrl-x><x>': 'cmd-set-text -s :tab-select ;; tab-close', 
     # OR...
 #   '<b>': 'cmd-set-text :tab-select',
         
@@ -349,15 +345,15 @@ c.bindings.commands['normal'] = {
     #       and just... refrrrrrrinvent the wheel here i guess.
     
     '<ctrl-t><1>': 'window-only',
-    '<ctrl-x><5><2>': 'cmd-set-text -s :open -w',
-    '<ctrl-q>': 'cmd-set-text -s :open -p ;; message-info "shadow stitching."',
+    '<ctrl-x><5><2>': 'cmd-set-text -s :open -w --secure',
+    '<ctrl-q>': 'cmd-set-text -s :open -p --secure ;; message-info "shadow stitching."',
 
     # frame shift (reality)
     
-    '<ctrl-space>': 'cmd-set-text -s :open',
-    '<space>': 'cmd-set-text -s :open -t',
+    '<ctrl-space>': 'cmd-set-text -s :open --secure',
+    '<space>': 'cmd-set-text -s :open -t --secure ',
     '<ctrl-x><tab>': 'cmd-set-text -s :open -p ;; message-info "shadowing browser activity."', 
-    '<ctrl-x><3>': 'cmd-set-text -s :open -t',
+    '<ctrl-x><3>': 'cmd-set-text -s :open -t --secure',
     
     # editing
 
@@ -372,10 +368,8 @@ c.bindings.commands['normal'] = {
     '<ctrl-h><ctrl-v>': 'hint links spawn -d mpv --loop --force-window=immediate --volume=50 {hint-url}',
     '<ctrl-m><r>': 'spawn -d goodvibes',    
     '<ctrl-m><p>': 'spawn -d keepassxc', 
-
     '<ctrl-m><w>': 'spawn -d microsoft-edge {url}', # broken-website-but-i-have-shit-to-do button
     '<ctrl-m><f>': 'spawn -d /usr/bin/terminator -x mc',
-    '<ctrl-m><ctrl-r>': 'spawn -d /usr/bin/riseup-vpn.launcher',
     '<ctrl-m><m>': 'spawn -d pavucontrol',
     '<ctrl-x><v><v>': ':version',
 
@@ -392,11 +386,7 @@ c.bindings.commands['normal'] = {
     # Websites
     # will be <alt-x><o>, then the name.
     # <alt-x><o> as :open will become <ctrl-x><ctrl-s> (visit)     
-
-    # Will also find a way to do a custom query before opening a link to a site like YouTube? 
-
-    # Will figure out how to call it :search in this state. Patience. 
-    
+   
 #   '<ctrl-f><ctrl-x><s><u>': 'open -t https://sushigirl.us'
 
     # Add M-x find
@@ -452,7 +442,7 @@ c.bindings.commands['insert'] = {
     '<shift-right>': 'fake-key <Ctrl-Shift-Right>',
     '<ctrl-b>': 'fake-key <Left>',
     '<ctrl-f>': 'fake-key <Right>',
-    '<alt-f>': 'fake-key <Ctrl-Right>',
+    '<alt-j>': 'fake-key <Ctrl-Right>',
     '<alt-b>': 'fake-key <Ctrl-Left>',
     '<ctrl-a>': 'fake-key <Home>',
     '<ctrl-e>': 'fake-key <End>',
