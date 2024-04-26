@@ -22,18 +22,33 @@ it feels like a diary connected to the internet.
 
 --- BASICS --- 
 
-    spacebar opens the :open -t cmd dialog.
-    ctrl-space opens the :open dialog.
+    C-SPC opens a link in the current tab with whatever you type in the address bar.
+    SPC opens a new link with whatever you type in the address bar.
     C-x TAB gives you some privacy.
+    M-w copies text.
+    C-y pastes text.
     a lets you close tabs.
-    C-u lets you do different things to interact with current URL you're facing.
-    C-t gives you control of the tab you're facing.
-    move tab positions with shift-left/right.
-    the left and right arrows by themselves navigate history.
-    C-h c, the only C-h command that has nothing to do with hinting, clears your history. 
+    m lets you mute tabs.
+    t lets you pin tabs.
+    R lets you reload the page.
+    C-u b lets you bookmark.
+    C-t b lets you load a bookmark.
+    C-u q lets you quickmark.
+    C-t q lets you load a quickmark.
+    C-t s toggles tab vision.
+    C-u M-w lets you copy the current working URL to your clipboard.
+    C-u d downloads the entire page source.
+    C-x p features different proxy settings that can be enabled or configured easily.
+    left moves backwards in history.
+    right moves forwards in history.
+    C-h c clears your history.
+    LEFT moves tabs to the left.
+    RIGHT moves tabs to the right. 
     
     h is now the main hinting key.
     C-h gives you access to a variety of commands. a very wide variety.
+    C-h i hints images.
+    C-h I hints media that can be downloaded.
 
     ; will open a link you've either selected or have already copied to your clipboard in another tab.
     ` will run commands inside of the terminal you select.
@@ -53,6 +68,7 @@ it feels like a diary connected to the internet.
 
 -- INSERT MODE --
 
+    w or C-i both enter insert mode.
     C-p moves the cursor up.
     C-n moves the cursor down.
     C-f moves the cursor right.
