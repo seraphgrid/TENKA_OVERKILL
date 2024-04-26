@@ -1,4 +1,4 @@
-bro didnt cook```
+```
 loading tenka... 45%
 ...urge to bypass loading screen detected...
 
@@ -6,17 +6,21 @@ NEW_OPEN signal processed...
 transmitting...
 
 SG: dude... are you sure?
-
 SG: ...she isn't perfect... but if you know some emacs, i guess it won't be so scary.
 SG: this is on the doomier side.
-SG: everything is jumbled right now. it's very fuzzy, so i'll explain some things.
+SG: everything is jumbled right now. it's very fuzzy, so i'll explain some things you should do first.
 
-SG: first, find and replace all instances of /usr/bin/terminator with the terminal you use
+SG: --- THINGS YOU SHOULD DO FIRST --- 
+
+SG: 1. find and replace all instances of /usr/bin/terminator with the terminal you use
     and the syntax necessary to run each command. alternatively, tear it down and do your
     own thing.
-SG: second, change the commands involving the file manager you want to use. thirdly,
+
+SG: 2. change the commands involving the file manager you want to use. thirdly,
     change the start page specified in c.url.default_page and c.url.start_pages, unless you like
     that (currently, very) stupid thing. 
+
+SG: --- BASICS --- 
 
 SG: spacebar opens the :open -t cmd dialog. ctrl-space opens the :open dialog. C-x TAB gives
     you some privacy. a lets you close tabs. C-u lets you do different things tho interact with
@@ -29,6 +33,8 @@ SG: h is now the main hinting key, and C-h gives you access to a variety of comm
     and some of them will make sense to you if you've used emacs. others are just spam. you
     can help me by desiginating them to keys that make more sense and telling me what you did.
     that'd be cool. 
+
+SG: -- SOME QUICK TIPS -- 
 
 SG: oh... C-x C-a updates the adblock. C-x C-g updates the Greasemonkey scripts that tenka can
     understand. C-d c can clear downloads when they clutter your screen. C-d o can open them.
