@@ -32,8 +32,8 @@ it feels like a diary connected to the internet.
 
 --- BASICS ---
 
-    C-p moves the page upwards.
-    C-n moves the page downwards.
+    C-p (or just p) moves the page upwards.
+    C-n (or just n) moves the page downwards.
     SPC opens a new tab with whatever you type in the address bar.
     C-SPC opens a link in the current tab with whatever you type in the address bar.
     C-x TAB gives you some privacy.
@@ -67,7 +67,7 @@ it feels like a diary connected to the internet.
     h is now the main hinting key.
     C-h gives you access to a variety of commands. a very wide variety.
     C-h i hints images.
-    C-h I hints media that can be downloaded.
+    C-h d hints media that can be downloaded. You can also use the s key. 
     C-h b hints all URLs for bookmarking.
     C-h b hints all URLs for quickmarking. 
 
